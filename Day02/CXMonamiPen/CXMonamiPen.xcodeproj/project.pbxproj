@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A3562D1E79471E00BDD1CF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3562C1E79471E00BDD1CF /* main.swift */; };
+		04A356341E7948E800BDD1CF /* CXMonamiPen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A356331E7948E800BDD1CF /* CXMonamiPen.swift */; };
+		04A356361E79490C00BDD1CF /* CXPen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A356351E79490C00BDD1CF /* CXPen.swift */; };
+		04A356381E79577100BDD1CF /* CXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A356371E79577100BDD1CF /* CXColors.swift */; };
+		04A3563E1E7957B700BDD1CF /* PenHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3563D1E7957B700BDD1CF /* PenHolder.swift */; };
+		04A356401E795CE900BDD1CF /* CXSharpPen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3563F1E795CE900BDD1CF /* CXSharpPen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04A356271E79471E00BDD1CF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04A356291E79471E00BDD1CF /* CXMonamiPen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CXMonamiPen; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A3562C1E79471E00BDD1CF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		04A356331E7948E800BDD1CF /* CXMonamiPen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXMonamiPen.swift; sourceTree = "<group>"; };
+		04A356351E79490C00BDD1CF /* CXPen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXPen.swift; sourceTree = "<group>"; };
+		04A356371E79577100BDD1CF /* CXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXColors.swift; sourceTree = "<group>"; };
+		04A3563D1E7957B700BDD1CF /* PenHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenHolder.swift; sourceTree = "<group>"; };
+		04A3563F1E795CE900BDD1CF /* CXSharpPen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CXSharpPen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A356261E79471E00BDD1CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04A356201E79471E00BDD1CF = {
+			isa = PBXGroup;
+			children = (
+				04A3562B1E79471E00BDD1CF /* CXMonamiPen */,
+				04A3562A1E79471E00BDD1CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04A3562A1E79471E00BDD1CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A356291E79471E00BDD1CF /* CXMonamiPen */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A3562B1E79471E00BDD1CF /* CXMonamiPen */ = {
+			isa = PBXGroup;
+			children = (
+				04A3563D1E7957B700BDD1CF /* PenHolder.swift */,
+				04A3562C1E79471E00BDD1CF /* main.swift */,
+				04A356351E79490C00BDD1CF /* CXPen.swift */,
+				04A356371E79577100BDD1CF /* CXColors.swift */,
+				04A3563F1E795CE900BDD1CF /* CXSharpPen.swift */,
+				04A356331E7948E800BDD1CF /* CXMonamiPen.swift */,
+			);
+			path = CXMonamiPen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04A356281E79471E00BDD1CF /* CXMonamiPen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A356301E79471E00BDD1CF /* Build configuration list for PBXNativeTarget "CXMonamiPen" */;
+			buildPhases = (
+				04A356251E79471E00BDD1CF /* Sources */,
+				04A356261E79471E00BDD1CF /* Frameworks */,
+				04A356271E79471E00BDD1CF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CXMonamiPen;
+			productName = CXMonamiPen;
+			productReference = 04A356291E79471E00BDD1CF /* CXMonamiPen */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04A356211E79471E00BDD1CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Hanna;
+				TargetAttributes = {
+					04A356281E79471E00BDD1CF = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04A356241E79471E00BDD1CF /* Build configuration list for PBXProject "CXMonamiPen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04A356201E79471E00BDD1CF;
+			productRefGroup = 04A3562A1E79471E00BDD1CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A356281E79471E00BDD1CF /* CXMonamiPen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A356251E79471E00BDD1CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A356361E79490C00BDD1CF /* CXPen.swift in Sources */,
+				04A3563E1E7957B700BDD1CF /* PenHolder.swift in Sources */,
+				04A3562D1E79471E00BDD1CF /* main.swift in Sources */,
+				04A356381E79577100BDD1CF /* CXColors.swift in Sources */,
+				04A356341E7948E800BDD1CF /* CXMonamiPen.swift in Sources */,
+				04A356401E795CE900BDD1CF /* CXSharpPen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04A3562E1E79471E00BDD1CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04A3562F1E79471E00BDD1CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		04A356311E79471E00BDD1CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04A356321E79471E00BDD1CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A356241E79471E00BDD1CF /* Build configuration list for PBXProject "CXMonamiPen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A3562E1E79471E00BDD1CF /* Debug */,
+				04A3562F1E79471E00BDD1CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A356301E79471E00BDD1CF /* Build configuration list for PBXNativeTarget "CXMonamiPen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A356311E79471E00BDD1CF /* Debug */,
+				04A356321E79471E00BDD1CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04A356211E79471E00BDD1CF /* Project object */;
+}
