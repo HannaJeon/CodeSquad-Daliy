@@ -24,7 +24,7 @@
 ## Day02
 #### CXMonamiPen 클래스를 만들자
 1. CXPen 를 상속받아 CXMonamiPen 클래스를 만드세요
-2. Red, Blue, Black 세부 클래스를 작성하세요.
- * printDescription() 메서드를 override해서 세부 정보까지 모두
+2. Red, Blue, Black 세부 클래스를 작성하세요.  
+• printDescription() 메서드를 override해서 세부 정보까지 모두
 나오록 하세요  
- * 세부 클래스 인스턴스를 만들어서 PenHolder에 추가하세요.
+• 세부 클래스 인스턴스를 만들어서 PenHolder에 추가하세요.
