@@ -27,4 +27,4 @@
 2. Red, Blue, Black 세부 클래스를 작성하세요.  
 • printDescription() 메서드를 override해서 세부 정보까지 모두
 나오록 하세요  
-• 세부 클래스 인스턴스를 만들어서 PenHolder에 추가하세요.
+• 세부 클래스 인스턴스를 만들어서 PenHolder에 추가하세요
