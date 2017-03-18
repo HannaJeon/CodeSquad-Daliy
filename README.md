@@ -5,7 +5,7 @@
 | Day01 | CXPen          | 17.03.15 18:40 | 완료      |
 | Day01 | FileMatcher    | 17.03.16 00:20 | 완료      |
 | Day02 | CXMonamiPen    | 17.03.15 20:50 | 완료      |
-| Day03 | Date & Time    | 17.03.18 21:30 | 미해결    |
+| Day03 | Date & Time    | 17.03.18 21:30 | 완료      |
 | Day03 | VendingMachine | 17.03.18 21:30 | 완료      |
 | Day04 | Multi-Touches  | 17.03.18 21:30 | 완료      |
 

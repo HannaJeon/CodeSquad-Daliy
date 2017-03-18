@@ -10,7 +10,6 @@ import Foundation
 
 class MyCalender {
     private let dateFormatter = DateFormatter()
-    private let dateCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
     
 //    • 오늘 날짜의 년, 월, 일, 시, 분, 초를 튜플로 묶어서 리턴하는 함수
     func today() -> (Int, Int, Int, Int, Int, Int) {
@@ -65,18 +64,43 @@ class MyCalender {
 
 //    • 특정 년도와 특정 달을 입력하면 일자를 주단위로 배열에 넣고,
 //      주단위 배열을 다시 배열에 넣어 2차원 배열로 리턴하는 함수
-    func weekArray(year: Int, month: Int) {
-        var week = [Int]
+    func weekArray(year: Int, month: Int) -> [[Int]] {
+        var week = [[Int]]()
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
-        let com = DateComponents(calendar: cal, year: year, month: month, day: 31)
-//        let date : Date = cal.date(from: com)!
-//        let dateFormatter = DateFormatter()
-//        var week = [Ine]()
-//        for d ...(com.day)! {
-//            
-//        }
-        print(com.day)
+        dateFormatter.dateFormat = "dd"
         
+        // 시작 날짜 찾기
+        let firstcom = DateComponents(calendar: cal, year: year, month: month, day: 1)
+        let firstDay = cal.date(from: firstcom)!
+        let stringFirst = dateFormatter.string(from: firstDay)
+        let first = Int(stringFirst)!
         
+        // 마지막 날짜
+        let targetMonthCom = DateComponents(calendar: cal, year: year, month: month + 1, day: 0)
+        let lastDay = cal.date(from: targetMonthCom)!
+        let stringLast = dateFormatter.string(from: lastDay)
+        let last = Int(stringLast)!
+        
+        // 요일 찾기
+        func findWeekday(day: Int) -> Int {
+            let weekday = DateComponents(calendar: cal, year: year, month: month, day: day)
+            let date = cal.date(from: weekday)
+            let form = DateFormatter()
+            form.dateFormat = "ee"
+            return Int(form.string(from: date!))!
+        }
+        
+        // 리턴
+        var temp = [Int]()
+        for day in first...last {
+            if findWeekday(day: day) == 07 || day == last {
+                temp.append(day)
+                week.append(temp)
+                temp.removeAll()
+            } else {
+                temp.append(day)
+            }
+        }
+        return week
     }
    }
