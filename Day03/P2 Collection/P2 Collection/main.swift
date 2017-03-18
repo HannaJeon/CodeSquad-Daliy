@@ -20,9 +20,14 @@ let hotSix = Caffeine(caffeine: 20, manu: "B", amount: 250, price: 2500, name: "
 
 
 let a = VendingMachine()
-a.setBeverage(name: coke.getName(), price: coke.getPrice())
-a.setBeverage(name: coke.getName(), price: coke.getPrice())
-print(a.setBeverage(name: sprite.getName(), price: sprite.getPrice()))
 
-print(a.check())
-print(a.purchableList(money: 1800))
+a.setBeverage(name: coke.getName(), price: coke.getPrice(), stock: 100)
+a.setBeverage(name: sprite.getName(), price: sprite.getPrice(), stock: 1)
+
+a.check()
+print(a.purchableList(money: 5000))
+print(a.buyDrink(name: "Coke"))
+a.check()
+print(a.buyDrink(name: "Sprite"))
+a.check()
+print(a.getDrinkList())
