@@ -8,6 +8,8 @@
 | Day03 | Date & Time    | 17.03.19 02:30 | 완료      |
 | Day03 | VendingMachine | 17.03.18 21:30 | 완료      |
 | Day04 | Multi-Touches  | 17.03.18 21:30 | 완료      |
+| Day05 | MyVending      | 17.03.21 21:27 | 완료      |
+| Day06 | StringExtension| 17.03.21 20:02 | 완료      |
 
 ****
 
@@ -63,3 +65,24 @@
 • View의 배경색을 원하는 색으로 지정합니다.  
 • touch 이벤트 핸들링으로 터치 시작점을 기준으로, 터치이후 움직이면 시작점에서 멀어질 수록 투명해지도록 만드세요.  
 • 손을 띄면 다시 원래대로 복원하세요.
+
+## Day05
+#### MyVending
+1. 자판기 “음료수 재고 데이터” 백그라운드가 될 때 저장  
+• **음료수 재고를 추가하는 건 저장된 재고 데이터가 없을 경우만!**  
+• 앱을 종료한 뒤에 다시 띄워서 재고 데이터를 복원해보세요.
+2. 화면에 음료수별로 [추가 버튼]을 만드세요.  
+• 추가 버튼을 누르면 해당 음료수 재고를 모델에 추가하세요.  
+• 모델은 재고가 추가될 때마다 전체 음료수 재고를
+NotificationCenter에 post하세요.  
+• ViewController는 Observe하고 있다가 음료수 재고를 화면
+에 Label로 표시하세요.
+
+## Day06
+#### StringExtension
+1. String 타입을 다음과 같이 확장하세요.  
+• 문자열 중에서 한글만 뜯어서 Array로 리턴하는 메서드를
+추가하세요  
+*"http://www.osxdev.org/forum/index.php?threads/swift-2-0에서-try-catch로-fatalerror-잡을-수-있나요.382/"*  
+• func filterHangulWord() -> [String]  
+• 예상 결과 : [ “에서”, “로”, “잡을”, “수”, “있나요” ]
