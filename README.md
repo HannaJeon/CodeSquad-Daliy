@@ -77,6 +77,11 @@
 NotificationCenter에 post하세요.  
 • ViewController는 Observe하고 있다가 음료수 재고를 화면
 에 Label로 표시하세요.
+3. 음료수 클래스에 프로토콜 추가하기(Day06)  
+• Protocol Equatable 을 추가하고 구현하세요  
+*func ==(lhs: Self, rhs: Self) -> Bool*  
+• 두 개의 음료수 인스턴스가 같은지 비교해보세요.  
+• 예) 콜라 vs 사이다, 콜라 vs 콜라
 
 ## Day06
 #### StringExtension
