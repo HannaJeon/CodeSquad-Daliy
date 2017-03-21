@@ -12,10 +12,12 @@ class ViewController: UIViewController {
     let vm = VendingMachine()
     
     let coke = Beverages(manu: "A", amount: 250, price: 2000, name: "Coke")
+    let sprite = Beverages(manu: "B", amount: 250, price: 2000, name: "Sprite")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NotificationCenter.default.addObserver(self, selector: VendingMachine.check, name: "stock", object: nil)
+//        NotificationCenter.default.addObserver(self, selector: self.setLabel, name: "stock", object: nil)
+        print(coke == sprite)
         
     }
 
@@ -26,18 +28,30 @@ class ViewController: UIViewController {
     
     func add() {
         vm.setBeverage(name: coke.getName(), price: coke.getPrice(), stock: 5)
+        vm.setBeverage(name: sprite.getName(), price: sprite.getPrice(), stock: 5)
     }
     
     func remove() {
         vm.purchableList(money: 5000)
         vm.buyDrink(name: "Coke")
     }
+    
+    func setLabel() {
+        cokeLabel.text.
+    }
 
    
-    @IBAction func cokeButton(_ sender: Any) {
-        add()
+    @IBAction func cokeButton(_ sender: UIButton) {
+        vm.setBeverage(name: coke.getName(), price: coke.getPrice(), stock: 1)
+    }
+    
+    @IBAction func spriteButton(_ sender: UIButton) {
+        vm.setBeverage(name: sprite.getName(), price: sprite.getPrice(), stock: 1)
     }
     
     @IBOutlet weak var cokeLabel: UILabel!
+    
+    @IBOutlet weak var spriteLabel: UILabel!
+    
 }
 

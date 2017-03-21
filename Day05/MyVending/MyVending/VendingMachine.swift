@@ -22,6 +22,7 @@ class VendingMachine {
             beverages[name] = stock
             self.price[name] = price
         }
+//        NotificationCenter.post(NSNotification.init(name: "stock", object: nil))
     }
     
 //    - 전체 음료수 재고를 (사전으로 표현하는) 종류별로 리턴하는 함수

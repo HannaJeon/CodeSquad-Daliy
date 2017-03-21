@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Beverages{
+class Beverages : Equatable {
     private let manufacturer : String
     private var amount : Int
     private let price : Int
@@ -30,4 +30,9 @@ class Beverages{
     func getPrice() -> Int {
         return price
     }
+    
+    static func == (lhs: Beverages, rhs: Beverages) -> Bool {
+        return lhs.price == rhs.price && lhs.amount == rhs.amount
+    }
+    
 }
