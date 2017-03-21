@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let vc = self.window?.rootViewController as! ViewController
+        
+        if let _ = saveStock {
+            vc.vm.loadStock(saveStock!)
+            vc.vm.loadPrice(savePrice!)
+        }
+//        print("save late", saveStock!)
         return true
     }
 

@@ -14,11 +14,17 @@ class ViewController: UIViewController {
     let coke = Beverages(manu: "A", amount: 250, price: 2000, name: "Coke")
     let sprite = Beverages(manu: "B", amount: 250, price: 2000, name: "Sprite")
     
+    @IBOutlet weak var cokeLabel: UILabel!
+    @IBOutlet weak var spriteLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NotificationCenter.default.addObserver(self, selector: self.setLabel, name: "stock", object: nil)
-        print(coke == sprite)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setLabel), name: NSNotification.Name(rawValue: "stock"), object: nil)
+        let notif = Notification(name: Notification.Name("any"), object: nil, userInfo: vm.check())
+        setLabel(notif: notif)
+
+        print(coke == sprite)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,8 +42,14 @@ class ViewController: UIViewController {
         vm.buyDrink(name: "Coke")
     }
     
-    func setLabel() {
-        cokeLabel.text.
+    func setLabel(notif : Notification) {
+        let stock = notif.userInfo!
+        if let coke = stock["Coke"] {
+            cokeLabel.text = String(describing: coke)
+        }
+        if let sprite = stock["Sprite"] {
+            spriteLabel.text = String(describing: sprite)
+        }
     }
 
    
@@ -49,9 +61,7 @@ class ViewController: UIViewController {
         vm.setBeverage(name: sprite.getName(), price: sprite.getPrice(), stock: 1)
     }
     
-    @IBOutlet weak var cokeLabel: UILabel!
     
-    @IBOutlet weak var spriteLabel: UILabel!
     
 }
 
