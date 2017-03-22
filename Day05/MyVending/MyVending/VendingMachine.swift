@@ -8,12 +8,18 @@
 
 import Foundation
 
-class VendingMachine {
-    private var beverages : [String : Int] = [:]
-    private var price : [String : Int] = [:]
-    private var money : Int = 0
-    private var getList = [String : Int]()
+class VendingMachine : NSObject, NSCoding {
+    private var beverages : [String : Int]
+    private var price : [String : Int]
+    private var money : Int
+    private var getList : [String : Int]
     
+    override init() {
+        self.beverages = [String : Int]()
+        self.price = [String : Int]()
+        self.money = 0
+        self.getList = [String : Int]()
+    }
 //    - 특정 음료를 추가하는 함수
     func setBeverage(name: String, price: Int, stock: Int) {
         if let key = beverages[name] {
@@ -78,15 +84,19 @@ class VendingMachine {
         return list
     }
     
-    func checkPrice() -> [String : Int] {
-        return price
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(beverages, forKey: "beverages")
+        aCoder.encode(price, forKey: "price")
+        aCoder.encode(money, forKey: "money")
+        aCoder.encode(getList, forKey: "getList")
     }
     
-    func loadPrice(_ save: [String : Int]) {
-        price = save
+    required init?(coder aDecoder: NSCoder) {
+        beverages = aDecoder.decodeObject(forKey: "beverages") as! [String : Int]
+        price = aDecoder.decodeObject(forKey: "price") as! [String : Int]
+        money = aDecoder.decodeInteger(forKey: "money")
+        getList = aDecoder.decodeObject(forKey: "getList") as! [String : Int]
+        
     }
-    
-    func loadStock(_ save: [String : Int]) {
-        beverages = save
-    }
+
 }

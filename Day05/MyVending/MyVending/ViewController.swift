@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let vm = VendingMachine()
+    private var vm = VendingMachine()
     
-    let coke = Beverages(manu: "A", amount: 250, price: 2000, name: "Coke")
-    let sprite = Beverages(manu: "B", amount: 250, price: 2000, name: "Sprite")
+    private let coke = Beverages(manu: "A", amount: 250, price: 2000, name: "Coke")
+    private let sprite = Beverages(manu: "B", amount: 250, price: 2000, name: "Sprite")
     
     @IBOutlet weak var cokeLabel: UILabel!
     @IBOutlet weak var spriteLabel: UILabel!
@@ -37,11 +37,6 @@ class ViewController: UIViewController {
         vm.setBeverage(name: sprite.getName(), price: sprite.getPrice(), stock: 5)
     }
     
-    func remove() {
-        vm.purchableList(money: 5000)
-        vm.buyDrink(name: "Coke")
-    }
-    
     func setLabel(notif : Notification) {
         let stock = notif.userInfo!
         if let coke = stock["Coke"] {
@@ -50,6 +45,14 @@ class ViewController: UIViewController {
         if let sprite = stock["Sprite"] {
             spriteLabel.text = String(describing: sprite)
         }
+    }
+    
+    func setVm(_ new : VendingMachine) {
+        self.vm = new
+    }
+    
+    func getVm() -> VendingMachine {
+        return self.vm
     }
 
    

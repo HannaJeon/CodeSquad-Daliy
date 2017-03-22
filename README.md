@@ -51,7 +51,7 @@
 • 클래스 속성에 따라 상위, 하위 부류를 만들어보세요.  
 • 필수 속성 : 제조사(String), 용량(Int), 가격(Int), 이름(String),
 유통기한(Date)
-2. 앞서 만든 음료수를 관리하는 자판기 클래스를 만드세요
+2. 앞서 만든 음료수를 관리하는 자판기 클래스를 만드세요  
 • 특정 음료를 추가하는 함수  
 • 전체 음료수 재고를 (사전으로 표현하는) 종류별로 리턴하는 함수  
 • 금액을 입력하면 구매가능한 음료 목록을 리턴하는 함수  
@@ -82,6 +82,12 @@ NotificationCenter에 post하세요.
 *func ==(lhs: Self, rhs: Self) -> Bool*  
 • 두 개의 음료수 인스턴스가 같은지 비교해보세요.  
 • 예) 콜라 vs 사이다, 콜라 vs 콜라
+4. 음료수 클래스에 NSCoding 프로토콜 추가하기(Day07)  
+• NSCoding을 위한 클래스는 NSObject에서 상속받아야 함  
+• **Protocol NSCoding 을 추가하고 구현하세요**  
+• save할 때 객체를 data로 archive해서 저장하고  
+• load할 때 data로 가져와서 unarchive하세요.  
+*-> 기존 UserDefault만으로 저장하는방식에서 Archive와 UserDefault를 같이 사용하여 객체를 저장하는 방식으로 변경됨*
 
 ## Day06
 #### StringExtension

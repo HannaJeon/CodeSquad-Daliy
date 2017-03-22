@@ -13,18 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let saveStock = UserDefaults.standard.object(forKey: "saveStock") as? [String : Int]
-    let savePrice = UserDefaults.standard.object(forKey: "savePrice") as? [String : Int]
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let vc = self.window?.rootViewController as! ViewController
         
-        if let _ = saveStock {
-            vc.vm.loadStock(saveStock!)
-            vc.vm.loadPrice(savePrice!)
+        let saveAll = UserDefaults.standard.data(forKey: "saveAll") // userDefault saveAll key를 가져옴
+        if saveAll != nil { // vc에 vm인스턴스에 저장된 값을 load함
+            vc.setVm((NSKeyedUnarchiver.unarchiveObject(with: saveAll!) as! VendingMachine))
+        } else {
+            vc.add()
         }
-//        print("save late", saveStock!)
         return true
     }
 
@@ -38,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         let vc = self.window?.rootViewController as! ViewController
         
-        UserDefaults.standard.set(vc.vm.check(), forKey: "saveStock")
-        UserDefaults.standard.set(vc.vm.checkPrice(), forKey: "savePrice")
+        let saveData = NSKeyedArchiver.archivedData(withRootObject: vc.getVm()) // archive save 상수
+        UserDefaults.standard.set(saveData, forKey: "saveAll") // save상수를 userDefault saveAll key로 저장
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -50,20 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         let vc = self.window?.rootViewController as! ViewController
         
-        if let _ = saveStock {
-            vc.vm.loadStock(saveStock!)
-            vc.vm.loadPrice(savePrice!)
-            
-            vc.remove()
-            
-            print("save late", saveStock!)
-//            print("checkStock", vc.vm.check())
-//            print("checkPrice", vc.vm.checkPrice())
-        } else {
-            vc.add()
-            print("save first", saveStock)
-            print(vc.vm.check())
+        let saveAll = UserDefaults.standard.data(forKey: "saveAll")
+        if saveAll != nil {
+            vc.setVm((NSKeyedUnarchiver.unarchiveObject(with: saveAll!) as! VendingMachine))
         }
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
