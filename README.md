@@ -105,7 +105,7 @@ NotificationCenter에 post하세요.
 • MyView 클래스 -drawRect: 를 새로 구현합니다.  
 • MyView 클래스의 -touchEnded:withEvent: 마다 랜덤하게 색을 바
 꿔서 다시 그려보세요
-2. 터치할 때마다 배경색 위에 다음과 같은 path를 그려보세요
+2. 터치할 때마다 배경색 위에 다음과 같은 path를 그려보세요  
 • 랜덤 시작점/끝점으로 Line 선 * 10개  
 • 랜덤 중점과 반지름으로 Arc 원 * 10개  
 • 랜덤 색으로 원을 색칠해보세요.
