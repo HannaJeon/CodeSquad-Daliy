@@ -10,7 +10,7 @@
 | Day04 | Multi-Touches  | 17.03.18 21:30 | 완료      |
 | Day05 | MyVending      | 17.03.21 21:27 | 완료      |
 | Day06 | StringExtension| 17.03.21 20:02 | 완료      |
-
+| Day07 | MyView         | 17.03.22 01:27 | 완료      |
 ****
 
 ## Day01
@@ -97,3 +97,15 @@ NotificationCenter에 post하세요.
 *"http://www.osxdev.org/forum/index.php?threads/swift-2-0에서-try-catch로-fatalerror-잡을-수-있나요.382/"*  
 • func filterHangulWord() -> [String]  
 • 예상 결과 : [ “에서”, “로”, “잡을”, “수”, “있나요” ]
+
+## Day07
+#### MyView
+1. 배경을 원하는 시작/종료색 gradient로 색칠해보세요.  
+• UIView에서 상속받는 MyView 클래스를 생성하고 IB에서 View의 클래스로 지정하세요.  
+• MyView 클래스 -drawRect: 를 새로 구현합니다.  
+• MyView 클래스의 -touchEnded:withEvent: 마다 랜덤하게 색을 바
+꿔서 다시 그려보세요
+2. 터치할 때마다 배경색 위에 다음과 같은 path를 그려보세요
+• 랜덤 시작점/끝점으로 Line 선 * 10개  
+• 랜덤 중점과 반지름으로 Arc 원 * 10개  
+• 랜덤 색으로 원을 색칠해보세요.
