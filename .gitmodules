@@ -1,0 +1,3 @@
+[submodule "Day09/camClient/Cloning"]
+	path = Day09/camClient/Cloning
+	url = http://github.com/Alamofire/Alamofire

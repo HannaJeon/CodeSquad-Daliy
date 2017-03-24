@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agN-3I-jiA" userLabel="topView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNB-53-RjT">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H6G-Rc-c8D">
+                                                <rect key="frame" x="0.0" y="0.0" width="581" height="200"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watch" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-KZ-DU0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="581" height="200"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rgo-Fh-gzU">
+                                                <rect key="frame" x="581" y="0.0" width="187" height="200"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone6s" translatesAutoresizingMaskIntoConstraints="NO" id="XNF-qf-4MQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="187" id="kXu-1T-pIc"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="H6G-Rc-c8D" firstAttribute="leading" secondItem="nNB-53-RjT" secondAttribute="leading" id="2VB-fj-Jqq"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rgo-Fh-gzU" secondAttribute="trailing" id="31v-9S-BUp"/>
+                                            <constraint firstItem="Rgo-Fh-gzU" firstAttribute="leading" secondItem="H6G-Rc-c8D" secondAttribute="trailing" id="J12-rs-UN2"/>
+                                            <constraint firstItem="Rgo-Fh-gzU" firstAttribute="top" secondItem="nNB-53-RjT" secondAttribute="top" id="P3T-nx-UNX"/>
+                                            <constraint firstItem="H6G-Rc-c8D" firstAttribute="top" secondItem="nNB-53-RjT" secondAttribute="top" id="jJV-WV-wNj"/>
+                                            <constraint firstItem="Rgo-Fh-gzU" firstAttribute="leading" secondItem="H6G-Rc-c8D" secondAttribute="trailing" id="ozz-5Z-c0c"/>
+                                            <constraint firstAttribute="bottom" secondItem="H6G-Rc-c8D" secondAttribute="bottom" id="qFx-2q-PGm"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rgo-Fh-gzU" secondAttribute="bottom" id="zoC-Ry-Laq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nNB-53-RjT" firstAttribute="leading" secondItem="agN-3I-jiA" secondAttribute="leading" id="8g4-Ef-Xke"/>
+                                    <constraint firstAttribute="height" constant="200" id="FZ1-Xo-LJw"/>
+                                    <constraint firstAttribute="bottom" secondItem="nNB-53-RjT" secondAttribute="bottom" id="TP8-Nb-Ec1"/>
+                                    <constraint firstItem="nNB-53-RjT" firstAttribute="top" secondItem="agN-3I-jiA" secondAttribute="top" id="djh-yq-FR6"/>
+                                    <constraint firstAttribute="trailing" secondItem="nNB-53-RjT" secondAttribute="trailing" id="rjK-Kq-whD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psj-wg-YJS" userLabel="splitView">
+                                <rect key="frame" x="0.0" y="200" width="768" height="24"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hV0-mz-K4V"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSe-Hr-0Nm" userLabel="bottomView">
+                                <rect key="frame" x="0.0" y="224" width="768" height="800"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipad-pro" translatesAutoresizingMaskIntoConstraints="NO" id="d5C-01-24k">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="800"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="d5C-01-24k" secondAttribute="height" multiplier="24:25" id="xVf-ko-PWt"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="d5C-01-24k" firstAttribute="centerY" secondItem="GSe-Hr-0Nm" secondAttribute="centerY" id="9sl-BL-xYk"/>
+                                    <constraint firstItem="d5C-01-24k" firstAttribute="centerX" secondItem="GSe-Hr-0Nm" secondAttribute="centerX" id="YkO-N4-FiS"/>
+                                    <constraint firstItem="d5C-01-24k" firstAttribute="width" secondItem="GSe-Hr-0Nm" secondAttribute="width" id="sao-Ze-Sxc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="agN-3I-jiA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8BS-5e-Jsj"/>
+                            <constraint firstItem="psj-wg-YJS" firstAttribute="top" secondItem="agN-3I-jiA" secondAttribute="bottom" id="J8D-ne-eKx"/>
+                            <constraint firstAttribute="trailing" secondItem="agN-3I-jiA" secondAttribute="trailing" id="OMV-J8-mIA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GSe-Hr-0Nm" secondAttribute="bottom" id="Rh2-QB-32u"/>
+                            <constraint firstItem="psj-wg-YJS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SlJ-Z5-IAP"/>
+                            <constraint firstItem="GSe-Hr-0Nm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UDf-1T-mMd"/>
+                            <constraint firstItem="agN-3I-jiA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aEA-cc-MyC"/>
+                            <constraint firstItem="GSe-Hr-0Nm" firstAttribute="top" secondItem="psj-wg-YJS" secondAttribute="bottom" id="f8o-VM-WZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="psj-wg-YJS" secondAttribute="trailing" id="qvK-qT-ONg"/>
+                            <constraint firstAttribute="trailing" secondItem="GSe-Hr-0Nm" secondAttribute="trailing" id="tkB-Up-yDs"/>
+                            <constraint firstItem="psj-wg-YJS" firstAttribute="top" secondItem="agN-3I-jiA" secondAttribute="bottom" id="x5o-vJ-k1S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splitView" destination="psj-wg-YJS" id="cUL-Zo-Mfi"/>
+                        <outlet property="topViewHeight" destination="FZ1-Xo-LJw" id="NLh-H5-Zp9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.71875" y="138.8671875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ipad-pro" width="235" height="278"/>
+        <image name="iphone6s" width="800" height="600"/>
+        <image name="watch" width="763" height="314"/>
+    </resources>
+</document>
